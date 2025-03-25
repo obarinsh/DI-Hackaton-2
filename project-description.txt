@@ -1,0 +1,49 @@
+Who wants to be a Millioner: Geography Edition
+
+Think you know the world? Lets check this out!
+
+An interactive web-based quiz where users answer multiple-choice questions about 
+countries. Each question gives clues like population, flag, national food, capital city,
+and more.
+
+
+How It Works: 
+
+	•	A question is generated based on random country data (e.g., flag, capital, population, national dish).
+	•	One correct answer and three incorrect options are displayed.
+	•	The answers are shuffled randomly.
+	•	The user selects an answer and clicks Submit to check if it matches the correct one.
+	•	The quiz contains 20 questions per round.
+	•	There are two types of hints available:
+	   •	50/50 Hint – eliminates two wrong answers, leaving only one correct and one remaining wrong answer.
+	   •	Continent Hint – reveals the continent (e.g., Europe, Asia, South America) where the correct country is located.
+	•	After answering all 20 questions:
+	 •	The user receives their final score.
+	 •	A short review message is displayed based on their performance.
+	 •	A summary of all questions and answers is shown. For each incorrect answer, the correct one is highlighted to help the user learn.
+
+
+Tools & Structure:
+
+1. db.js : Handles connection to the PostgreSQL database, where all country data is stored.
+2. controller.js – Manages:
+	•	Database interaction
+	•	Generating random questions using templates
+	•	Creating random incorrect answers
+	•	Shuffling the final answers
+
+3. route.js – Defines the server routes and maps them to the correct controller functions.
+
+4. server.js – Entry point of the backend. Sets up the Express server and middleware.
+
+5. game-script.js – All frontend logic including:
+	•	Fetching and displaying questions
+	•	Checking answers
+	•	Tracking score and game history
+	•	Handling hint logic
+
+
+6. welcome.html – Landing page with a welcome message and a Start Game button.
+7. welcome-style.css – Styling for the welcome screen.
+8.	game.html – Main game interface for playing the quiz.
+9.	style.css – Styling for the main quiz interface (colors, layout, buttons, etc).
